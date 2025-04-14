@@ -1,87 +1,20 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Başkan Elektrik SU Tamiri</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-  <header>
-    <h1>Usta Hizmetleri</h1>
-    <p>Elektrik ve Su Tesisatı Tamiri - Hızlı ve Güvenilir Servis</p>
-  </header>
+  const message = document.getElementById('message');
+  message.textContent = "Teşekkürler! Mesajınız iletildi.";
+  message.classList.remove('hidden');
 
-  <section class="services">
-    <div class="card">
-      <h2>Elektrik Tamiri</h2>
-      <p>Kısa devre, priz değişimi, sigorta arızası gibi tüm işleriniz yapılır.</p>
-    </div>
-    <div class="card">
-      <h2>Su Tesisatı</h2>
-      <p>Musluk değişimi, su kaçağı, lavabo tıkanıklığı için hemen arayın.</p>
-    </div>
-  </section>
+  // Yeşil başarı mesajı stili
+  message.style.color = 'white';
+  message.style.backgroundColor = '#28a745';
+  message.style.padding = '10px';
+  message.style.borderRadius = '5px';
 
-  <section class="prices">
-    <h2>Fiyat Listesi</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Hizmet</th>
-          <th>Fiyat</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Priz Değişimi</td>
-          <td>150 TL</td>
-        </tr>
-        <tr>
-          <td>Sigorta Kutusu Bakımı</td>
-          <td>300 TL</td>
-        </tr>
-        <tr>
-          <td>Su Kaçağı Tespiti</td>
-          <td>250 TL</td>
-        </tr>
-        <tr>
-          <td>Musluk Değişimi</td>
-          <td>100 TL</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  this.reset();
 
-  <section class="map">
-    <h2>Konumumuz</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.728141903111!2d32.85405481538803!3d39.92077097942765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f3c2a9ad4df%3A0x2d7f8a1d06e566f!2zQW5rYXJhLCBUw7xya2l5ZQ!5e0!3m2!1str!2str!4v1614617223952!5m2!1str!2str" 
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
-
-  <section class="contact">
-    <h2>İletişim</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Adınız" required />
-      <input type="tel" placeholder="Telefon Numaranız" required />
-      <textarea placeholder="Mesajınız" required></textarea>
-      <button type="submit">Gönder</button>
-    </form>
-    <p id="message" class="hidden">Teşekkürler! Mesajınız iletildi.</p>
-  </section>
-
-  <a href="https://wa.me/905070461543" class="whatsapp-float" target="_blank" title="WhatsApp ile mesaj gönder">
-    💬
-  </a>
-
-  <footer>
-    <p>&copy; 2025 Usta Hizmetleri</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+  // 4 saniye sonra mesajı gizle
+  setTimeout(() => {
+    message.classList.add('hidden');
+  }, 4000);
+});
