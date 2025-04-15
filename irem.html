@@ -1,20 +1,44 @@
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usta Hizmetleri</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  const message = document.getElementById('message');
-  message.textContent = "Teşekkürler! Mesajınız iletildi.";
-  message.classList.remove('hidden');
+  <header>
+    <h1>Usta Hizmetleri</h1>
+    <p>Elektrik ve Su Tesisatı Tamiri - Hızlı ve Güvenilir Servis</p>
+  </header>
 
-  // Yeşil başarı mesajı stili
-  message.style.color = 'white';
-  message.style.backgroundColor = '#28a745';
-  message.style.padding = '10px';
-  message.style.borderRadius = '5px';
+  <section class="services">
+    <div class="card">
+      <h2>Elektrik Tamiri</h2>
+      <p>Kısa devre, priz değişimi, sigorta arızası gibi tüm işleriniz yapılır.</p>
+    </div>
+    <div class="card">
+      <h2>Su Tesisatı</h2>
+      <p>Musluk değişimi, su kaçağı, lavabo tıkanıklığı için hemen arayın.</p>
+    </div>
+  </section>
 
-  this.reset();
+  <section class="contact">
+    <h2>İletişim</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Adınız" required>
+      <input type="tel" placeholder="Telefon Numaranız" required>
+      <textarea placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+    <p id="message" class="hidden">Teşekkürler! Mesajınız iletildi.</p>
+  </section>
 
-  // 4 saniye sonra mesajı gizle
-  setTimeout(() => {
-    message.classList.add('hidden');
-  }, 4000);
-});
+  <footer>
+    <p>&copy; 2025 Usta Hizmetleri</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

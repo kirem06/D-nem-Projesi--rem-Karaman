@@ -1,17 +1,16 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f8ff;
+  background: #f4f4f4;
   color: #333;
 }
 
 header {
-  background: linear-gradient(to right, #0077cc, #00aaff);
+  background: #0077cc;
   color: white;
   padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .services {
@@ -19,84 +18,45 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 30px 20px;
-  flex-wrap: wrap;
 }
 
 .card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.prices {
-  background: #fff;
-  padding: 40px 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.prices table {
-  width: 80%;
-  margin: auto;
-  border-collapse: collapse;
-  font-size: 1.1em;
-  background: #e6f2ff;
-}
-
-.prices th,
-.prices td {
-  border: 1px solid #b3d1ff;
-  padding: 12px 15px;
-}
-
-.prices th {
-  background-color: #0077cc;
-  color: white;
-}
-
-.map,
 .contact {
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
-  background-color: #f9fbfd;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   max-width: 400px;
   margin: auto;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #a6c8ff;
-  border-radius: 6px;
-  background-color: #f4faff;
-  font-size: 1rem;
-  resize: vertical; /* textarea için iyileştirme */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-  padding: 10px 25px;
+  padding: 10px 20px;
   background: #0077cc;
   color: white;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 button:hover {
@@ -113,24 +73,10 @@ footer {
 
 .hidden {
   display: none;
+  color: green;
   margin-top: 10px;
-  font-weight: bold;
-  border-radius: 5px;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  font-size: 24px;
-  padding: 12px 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
 
   
   
