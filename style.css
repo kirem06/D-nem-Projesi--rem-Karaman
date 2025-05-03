@@ -76,17 +76,25 @@ body {
     background-color: var(--accent-color);
     border: none;
     padding: 15px 30px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .hero-section .btn-primary:hover {
     background-color: #c0392b;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.hero-section .btn-primary i {
+    font-size: 1.2rem;
 }
 
 /* Hizmetler Section */
