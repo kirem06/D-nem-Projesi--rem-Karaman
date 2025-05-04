@@ -305,17 +305,58 @@ body {
     transform: translateY(-2px);
 }
 
-/* Form Stilleri */
+/* İletişim Formu */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-color);
+}
+
+.form-label {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
 .form-control {
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+}
+
+/* Çalışma Saatleri */
+.contact-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-info .fa-clock {
+    color: var(--accent-color);
+    margin-right: 10px;
 }
 
 /* WhatsApp Butonu */

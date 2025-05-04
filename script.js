@@ -35,13 +35,50 @@ const animateOnScroll = function() {
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
 
-// Form Gönderimi
-const contactForm = document.querySelector('form');
+// Form İşlevselliği
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+        
+        // Form verilerini al
+        const formData = {
+            name: this.name.value,
+            phone: this.phone.value,
+            email: this.email.value,
+            message: this.message.value
+        };
+
+        // Form verilerini konsola yazdır (gerçek uygulamada burada API çağrısı yapılır)
+        console.log('Form verileri:', formData);
+
+        // Başarı mesajını göster
+        formSuccess.classList.remove('d-none');
+        formSuccess.classList.add('animate__animated', 'animate__fadeIn');
+
+        // Formu temizle
         this.reset();
+
+        // 5 saniye sonra başarı mesajını gizle
+        setTimeout(() => {
+            formSuccess.classList.add('animate__fadeOut');
+            setTimeout(() => {
+                formSuccess.classList.add('d-none');
+                formSuccess.classList.remove('animate__fadeOut', 'animate__fadeIn');
+            }, 500);
+        }, 5000);
+    });
+}
+
+// WhatsApp Mesajı
+const whatsappButton = document.querySelector('.whatsapp-button');
+if (whatsappButton) {
+    whatsappButton.addEventListener('click', function() {
+        // WhatsApp mesajını özelleştir
+        const message = "Merhaba, elektrik ve su tesisatı hizmetleriniz hakkında bilgi almak istiyorum.";
+        this.href = `https://wa.me/905070461543?text=${encodeURIComponent(message)}`;
     });
 }
 

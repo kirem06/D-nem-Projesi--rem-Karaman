@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- WhatsApp Butonu -->
-    <a href="https://wa.me/905070461543" class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/905070461543?text=Merhaba,%20elektrik%20ve%20su%20tesisatı%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -216,25 +216,40 @@
             <h2 class="text-center mb-5">İletişim</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <form>
+                    <form id="contactForm" class="contact-form">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Adınız">
+                            <label for="name" class="form-label">Adınız Soyadınız</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="E-posta">
+                            <label for="phone" class="form-label">Telefon Numaranız</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Mesajınız"></textarea>
+                            <label for="email" class="form-label">E-posta Adresiniz</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mesajınız</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Gönder</button>
                     </form>
+                    <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                        Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-info">
                         <h3>İletişim Bilgileri</h3>
                         <p><i class="fas fa-phone"></i> 0507 046 1543</p>
-                        <p><i class="fas fa-envelope"></i> krmnirem06@gmail.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Antalya / Alanya</p>
+                        <p><i class="fas fa-envelope"></i> info@elektriksu.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                        <div class="mt-4">
+                            <h4>Çalışma Saatleri</h4>
+                            <p><i class="far fa-clock"></i> Pazartesi - Cumartesi: 08:00 - 20:00</p>
+                            <p><i class="far fa-clock"></i> Pazar: 09:00 - 18:00</p>
+                        </div>
                     </div>
                 </div>
             </div>
