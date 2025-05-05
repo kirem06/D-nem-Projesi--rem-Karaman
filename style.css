@@ -465,4 +465,21 @@ body {
     border: 1px solid var(--border-color);
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+/* Çalışmalarımız Kartları */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 } 
