@@ -53,16 +53,66 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('elektrik.jpg');
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    color: white;
-    padding-top: 80px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    background-repeat: no-repeat;
     position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item .container {
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-item h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators {
+    bottom: 50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .hero-section::before {
@@ -289,6 +339,14 @@ body {
 /* Animasyonlar */
 .animate__animated {
     animation-duration: 1s;
+}
+
+.animate__delay-1s {
+    animation-delay: 0.5s;
+}
+
+.animate__delay-2s {
+    animation-delay: 1s;
 }
 
 /* Özel Buton Stilleri */
