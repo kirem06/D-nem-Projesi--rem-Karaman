@@ -38,37 +38,22 @@ window.addEventListener('load', animateOnScroll);
 // Form İşlevselliği
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Form verilerini al
-        const formData = {
-            name: this.name.value,
-            phone: this.phone.value,
-            email: this.email.value,
-            message: this.message.value
-        };
-
-        // Form verilerini konsola yazdır (gerçek uygulamada burada API çağrısı yapılır)
-        console.log('Form verileri:', formData);
-
-        // Başarı mesajını göster
-        formSuccess.classList.remove('d-none');
-        formSuccess.classList.add('animate__animated', 'animate__fadeIn');
-
-        // Formu temizle
-        this.reset();
-
-        // 5 saniye sonra başarı mesajını gizle
-        setTimeout(() => {
-            formSuccess.classList.add('animate__fadeOut');
-            setTimeout(() => {
+        // Form gönderildikten sonra başarı mesajını göster
+        setTimeout(function() {
+            formSuccess.classList.remove('d-none');
+            contactForm.reset();
+            
+            // 5 saniye sonra başarı mesajını gizle
+            setTimeout(function() {
                 formSuccess.classList.add('d-none');
-                formSuccess.classList.remove('animate__fadeOut', 'animate__fadeIn');
-            }, 500);
-        }, 5000);
+            }, 5000);
+        }, 1000);
     });
 }
 

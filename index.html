@@ -327,25 +327,26 @@
             <h2 class="text-center mb-5">İletişim</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <form id="contactForm" class="contact-form">
+                    <form id="contactForm" class="contact-form" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="hidden_iframe">
                         <div class="mb-3">
                             <label for="name" class="form-label">Adınız Soyadınız</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+                            <input type="text" class="form-control" id="name" name="entry.1234567890" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Telefon Numaranız</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <input type="tel" class="form-control" id="phone" name="entry.0987654321" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">E-posta Adresiniz</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input type="email" class="form-control" id="email" name="entry.1122334455" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Mesajınız</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            <textarea class="form-control" id="message" name="entry.5544332211" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Gönder</button>
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                     <div id="formSuccess" class="alert alert-success mt-3 d-none">
                         Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
                     </div>
